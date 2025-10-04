@@ -1,0 +1,148 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff3f6c; /* Myntra pink */
+    padding: 15px 30px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ffe6e6;
+}
+
+.cart {
+    font-size: 18px;
+}
+
+/* Banner Section */
+.banner {
+    background-image: url('https://via.placeholder.com/1200x300?text=Myntra+Banner');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.banner h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 20px;
+}
+
+/* Products Section */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 30px;
+    background-color: #f7f7f7;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+.product-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.product-card p {
+    color: #ff3f6c;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.product-card button {
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    border: none;
+    background-color: #ff3f6c;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.product-card button:hover {
+    background-color: #e12d5f;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .banner h1 {
+        font-size: 36px;
+    }
+
+    .banner p {
+        font-size: 16px;
+    }
+}
